@@ -1,0 +1,637 @@
+{
+ "geoms": {
+ "geom1_rect_cvplot": {
+ "geom": "rect",
+"classed": "geom1_rect_cvplot",
+"aes": {
+ "xmin": "xmin",
+"xmax": "xmax",
+"ymin": "ymin",
+"ymax": "ymax" 
+},
+"params": {
+ "na.rm": false,
+"na.rm": false,
+"fill": "transparent",
+"colour": "#999999",
+"linetype": "dashed" 
+},
+"types": {
+ "xmin": "numeric",
+"xmax": "numeric",
+"ymin": "numeric",
+"ymax": "numeric",
+"PANEL": "integer",
+"group": "character" 
+},
+"chunk_order": [],
+"nest_order": [],
+"subset_order": [],
+"chunks": 1,
+"total": 1 
+},
+"geom2_rect_cvplot": {
+ "geom": "rect",
+"classed": "geom2_rect_cvplot",
+"aes": {
+ "xmin": "xmin",
+"xmax": "xmax",
+"ymin": "ymin",
+"ymax": "ymax",
+"showSelected1": "fold" 
+},
+"params": {
+ "na.rm": false,
+"na.rm": false,
+"fill": "#90EE90",
+"alpha":      0.5,
+"colour": "#008B00",
+"showSelected": "fold",
+"help_showSelected": "fold" 
+},
+"types": {
+ "xmin": "numeric",
+"xmax": "numeric",
+"ymin": "numeric",
+"ymax": "numeric",
+"showSelected1": "integer",
+"PANEL": "integer",
+"group": "character" 
+},
+"chunk_order": [],
+"nest_order": [
+ "showSelected1" 
+],
+"subset_order": [
+ "showSelected1" 
+],
+"chunks": 1,
+"total": 1 
+},
+"geom3_point_cvplot": {
+ "geom": "point",
+"classed": "geom3_point_cvplot",
+"aes": {
+ "x": "index",
+"y": "value",
+"colour": "role",
+"key": "index",
+"showSelected1": "fold",
+"showSelected2": "role" 
+},
+"params": {
+ "na.rm": false,
+"na.rm": false,
+"size":        3,
+"showSelected": [ "fold", "role" ],
+"help_showSelected": [ "fold", "role" ] 
+},
+"types": {
+ "colour": "rgb",
+"x": "numeric",
+"y": "numeric",
+"key": "integer",
+"showSelected1": "integer",
+"showSelected2": "character",
+"PANEL": "integer",
+"group": "character",
+"fill": "rgb" 
+},
+"chunk_order": [
+ "fold" 
+],
+"nest_order": [
+ "showSelected2" 
+],
+"subset_order": [
+ "showSelected2" 
+],
+"columns": {
+ "common": [
+ "group",
+"key",
+"x",
+"y" 
+] 
+},
+"chunks": {
+ "1": 1,
+"2": 2,
+"3": 3,
+"4": 4,
+"5": 5,
+"6": 6,
+"7": 7,
+"8": 8,
+"9": 9,
+"10": 10 
+},
+"total": 10 
+},
+"geom4_bar_folds": {
+ "geom": "rect",
+"classed": "geom4_bar_folds",
+"aes": {
+ "x": "fold",
+"y": "size",
+"key": "fold" 
+},
+"params": {
+ "na.rm": false,
+"na.rm": false,
+"fill": "#CCCCCC",
+"colour": "#666666" 
+},
+"types": {
+ "key": "integer",
+"PANEL": "integer",
+"group": "character",
+"ymin": "numeric",
+"ymax": "numeric",
+"xmin": "numeric",
+"xmax": "numeric" 
+},
+"chunk_order": [],
+"nest_order": [],
+"subset_order": [],
+"chunks": 1,
+"total": 1 
+},
+"geom5_bar_folds": {
+ "geom": "rect",
+"classed": "geom5_bar_folds",
+"aes": {
+ "x": "fold",
+"y": "size",
+"key": "fold",
+"clickSelects": "fold",
+"showSelected1": "fold" 
+},
+"params": {
+ "na.rm": false,
+"na.rm": false,
+"fill": "#FF6347",
+"colour": "#666666",
+"showSelected": "fold",
+"clickSelects": "fold",
+"help_showSelected": "fold",
+"help_clickSelects": "fold" 
+},
+"types": {
+ "key": "integer",
+"clickSelects": "integer",
+"showSelected1": "integer",
+"PANEL": "integer",
+"group": "character",
+"ymin": "numeric",
+"ymax": "numeric",
+"xmin": "numeric",
+"xmax": "numeric" 
+},
+"chunk_order": [],
+"nest_order": [
+ "showSelected1" 
+],
+"subset_order": [
+ "showSelected1" 
+],
+"chunks": 1,
+"total": 1 
+} 
+},
+"time": {
+ "variable": "fold",
+"ms":      800,
+"sequence": [ "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" ] 
+},
+"selectors": {
+ "role": {
+ "type": "multiple",
+"legend": true,
+"is.variable.value": false,
+"showSelected": true,
+"selected": [ "Test", "Train" ],
+"levels": [ "Test", "Train" ],
+"update": [
+ "geom3_point_cvplot" 
+] 
+},
+"fold": {
+ "is.variable.value": false,
+"type": "single",
+"showSelected": true,
+"chunks": "fold",
+"clickSelects": true,
+"selected": "1",
+"levels": [ "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" ],
+"update": [
+ "geom2_rect_cvplot",
+"geom3_point_cvplot",
+"geom5_bar_folds" 
+] 
+} 
+},
+"plots": {
+ "cvplot": {
+ "panel_margin_lines":     0.27,
+"legend": {
+ "": {
+ "guide": "legend",
+"geoms": "point",
+"title": "",
+"class": "role",
+"selector": "role",
+"is_discrete": true,
+"legend_type": "colour",
+"text_size": "9.6pt",
+"title_size": "12pt",
+"entries": [
+ {
+ "pointcolour": "#FF6347",
+"pointshape":       21,
+"pointsize":        3,
+"pointstroke":      0.5,
+"label": "Test" 
+},
+{
+ "pointcolour": "#4682B4",
+"pointshape":       21,
+"pointsize":        3,
+"pointstroke":      0.5,
+"label": "Train" 
+} 
+] 
+} 
+},
+"strips": {
+ "top": [
+ "" 
+],
+"right": [
+ "" 
+],
+"n": {
+ "top":        0,
+"right":        0 
+} 
+},
+"layout": {
+ "PANEL": [ 1 ],
+"ROW": [ 1 ],
+"COL": [ 1 ],
+"SCALE_X": [ 1 ],
+"SCALE_Y": [ 1 ],
+"AXIS_X": [ true ],
+"AXIS_Y": [ true ],
+"coord_fixed": [ false ],
+"width_proportion": [        1 ],
+"height_proportion": [        1 ] 
+},
+"panel_background": {
+ "fill": "#FFFFFF",
+"colour": "transparent",
+"size":      0.5,
+"linetype":        1 
+},
+"panel_border": {
+ "fill": "transparent",
+"colour": "#7F7F7F",
+"size":      0.5,
+"linetype":        1 
+},
+"grid_major": {
+ "colour": "#E5E5E5",
+"size":      0.2,
+"linetype":        1,
+"lineend": "butt",
+"loc": {
+ "x": [
+ [
+        0,
+      50,
+     100,
+     150 
+] 
+],
+"y": [
+ [
+        0,
+    0.25,
+     0.5,
+    0.75,
+       1 
+] 
+] 
+} 
+},
+"grid_minor": {
+ "colour": "#FAFAFA",
+"size":      0.5,
+"linetype":        1,
+"lineend": "butt",
+"loc": {
+ "x": [
+ [
+        0,
+      25,
+      50,
+      75,
+     100,
+     125,
+     150 
+] 
+],
+"y": [
+ [
+        0,
+   0.125,
+    0.25,
+   0.375,
+     0.5,
+   0.625,
+    0.75,
+   0.875,
+       1 
+] 
+] 
+} 
+},
+"axis1": {
+ "x": [
+        0,
+      50,
+     100,
+     150 
+],
+"xlab": [
+ "0",
+"50",
+"100",
+"150" 
+],
+"xrange": [       -7,      158 ],
+"xline": false,
+"xticks": true,
+"y": [
+        0,
+    0.25,
+     0.5,
+    0.75,
+       1 
+],
+"ylab": [
+ "0.00",
+"0.25",
+"0.50",
+"0.75",
+"1.00" 
+],
+"yrange": [ -0.04919375, 1.038324 ],
+"yline": false,
+"yticks": true 
+},
+"xtitle": "Sample Index",
+"strip_text_xsize": "12pt",
+"xsize": "12pt",
+"xangle":        0,
+"xanchor": "middle",
+"ytitle": "Value",
+"strip_text_ysize": "12pt",
+"ysize": "12pt",
+"yangle":        0,
+"yanchor": "end",
+"xlabs": [
+ "0",
+"50",
+"100",
+"150" 
+],
+"ylabs": [
+ "0.00",
+"0.25",
+"0.50",
+"0.75",
+"1.00" 
+],
+"title": "k-Fold Cross Validation (k = 10)",
+"title_size": "14.4pt",
+"options": {
+ "width":      400,
+"height":      400 
+},
+"span": {
+ "rowspan": null,
+"colspan": null,
+"last_in_row": null 
+},
+"geoms": [
+ "geom1_rect_cvplot",
+"geom2_rect_cvplot",
+"geom3_point_cvplot" 
+] 
+},
+"folds": {
+ "panel_margin_lines":     0.27,
+"legend": {},
+"strips": {
+ "top": [
+ "" 
+],
+"right": [
+ "" 
+],
+"n": {
+ "top":        0,
+"right":        0 
+} 
+},
+"layout": {
+ "PANEL": [ 1 ],
+"ROW": [ 1 ],
+"COL": [ 1 ],
+"SCALE_X": [ 1 ],
+"SCALE_Y": [ 1 ],
+"AXIS_X": [ true ],
+"AXIS_Y": [ true ],
+"coord_fixed": [ false ],
+"width_proportion": [        1 ],
+"height_proportion": [        1 ] 
+},
+"panel_background": {
+ "fill": "#FFFFFF",
+"colour": "transparent",
+"size":      0.5,
+"linetype":        1 
+},
+"panel_border": {
+ "fill": "transparent",
+"colour": "#7F7F7F",
+"size":      0.5,
+"linetype":        1 
+},
+"grid_major": {
+ "colour": "#E5E5E5",
+"size":      0.2,
+"linetype":        1,
+"lineend": "butt",
+"loc": {
+ "x": [
+ [
+        1,
+       2,
+       3,
+       4,
+       5,
+       6,
+       7,
+       8,
+       9,
+      10 
+] 
+],
+"y": [
+ [
+        0,
+       5,
+      10,
+      15 
+] 
+] 
+} 
+},
+"grid_minor": {
+ "colour": "#FAFAFA",
+"size":      0.5,
+"linetype":        1,
+"lineend": "butt",
+"loc": {
+ "x": [
+ [
+      0.5,
+       1,
+     1.5,
+       2,
+     2.5,
+       3,
+     3.5,
+       4,
+     4.5,
+       5,
+     5.5,
+       6,
+     6.5,
+       7,
+     7.5,
+       8,
+     8.5,
+       9,
+     9.5,
+      10,
+    10.5 
+] 
+],
+"y": [
+ [
+        0,
+     2.5,
+       5,
+     7.5,
+      10,
+    12.5,
+      15 
+] 
+] 
+} 
+},
+"axis1": {
+ "x": [
+        1,
+       2,
+       3,
+       4,
+       5,
+       6,
+       7,
+       8,
+       9,
+      10 
+],
+"xlab": [
+ "1",
+"2",
+"3",
+"4",
+"5",
+"6",
+"7",
+"8",
+"9",
+"10" 
+],
+"xrange": [    0.055,   10.945 ],
+"xline": false,
+"xticks": true,
+"y": [
+        0,
+       5,
+      10,
+      15 
+],
+"ylab": [
+ "0",
+"5",
+"10",
+"15" 
+],
+"yrange": [    -0.75,    15.75 ],
+"yline": false,
+"yticks": true 
+},
+"xtitle": "Fold",
+"strip_text_xsize": "12pt",
+"xsize": "12pt",
+"xangle":        0,
+"xanchor": "middle",
+"ytitle": "Test set size",
+"strip_text_ysize": "12pt",
+"ysize": "12pt",
+"yangle":        0,
+"yanchor": "end",
+"xlabs": [
+ "1",
+"2",
+"3",
+"4",
+"5",
+"6",
+"7",
+"8",
+"9",
+"10" 
+],
+"ylabs": [
+ "0",
+"5",
+"10",
+"15" 
+],
+"title": "Click a fold  |  red = current test fold",
+"title_size": "14.4pt",
+"options": {
+ "width":      400,
+"height":      400 
+},
+"span": {
+ "rowspan": null,
+"colspan": null,
+"last_in_row": null 
+},
+"geoms": [
+ "geom4_bar_folds",
+"geom5_bar_folds" 
+] 
+} 
+},
+"source": "https://github.com/ANAMASGARD/cv-ani-animint/blob/main/cv_ani_viz.R",
+"title": "Demonstration of k-Fold Cross Validation" 
+}
