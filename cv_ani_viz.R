@@ -105,7 +105,7 @@ viz <- animint(
   source = "https://github.com/ANAMASGARD/cv-ani-animint/blob/main/cv_ani_viz.R"
 )
 
-animint2pages(viz, github_repo = "ANAMASGARD/cv-ani-animint")
+animint2pages(viz, "cv-ani-animint")
 
 
 ## local preview (uncomment to run locally instead)
