@@ -1,0 +1,7 @@
+.Rproj.user
+.Rhistory
+.RData
+.DS_Store
+
+# animint output (local only)
+cv_ani_output/
